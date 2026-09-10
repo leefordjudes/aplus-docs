@@ -31,7 +31,7 @@ const config: Config = {
 
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.auditplus.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -39,7 +39,7 @@ const config: Config = {
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'auditplus', // Usually your GitHub org/user name.
-  projectName: 'aerp-docs', // Usually your repo name.
+  projectName: 'aplus-docs', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 
@@ -57,6 +57,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -104,25 +105,25 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Auditplus',
+      // title: 'Auditplus',
       logo: {
         alt: 'Auditplus Logo',
-        src: 'img/aplus-logo.png',
+        src: 'img/ap-logo-comp.png',        // #1496DB  // #2a5d79
       },
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
-          label: 'Reference',
+          label: 'ERP',
           position: 'left',
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: 'about', label: 'About', position: 'left' },
         {
           type: 'docSidebar',
-          docsPluginId: 'getting-started',
+          docsPluginId: 'extensions',
           sidebarId: 'gettingStartedSidebar',
-          label: 'Getting Started', 
+          label: 'Extensions', 
           position: 'left',
         },
         {
