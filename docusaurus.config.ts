@@ -57,7 +57,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          routeBasePath: '',
+          routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -89,11 +89,11 @@ const config: Config = {
     [
       '@docusaurus/plugin-content-docs',
       {
-        id: 'getting-started',            // Unique ID for this specific plugin instance
-        path: 'getting-started',          // Points to your root folder name
-        routeBasePath: 'getting-started', // Generates the URL prefix (/getting-started)
+        id: 'extensions',            // Unique ID for this specific plugin instance
+        path: 'extensions',          // Points to your root folder name
+        routeBasePath: 'extensions', // Generates the URL prefix (/extensions)
         // sidebarPath: './sidebars.ts',     // We will define the sidebar layout inside sidebars.ts
-        sidebarPath: './sidebars-getting-started.ts', 
+        sidebarPath: './sidebars-extensions.ts', 
       },
     ],
   ],
@@ -119,10 +119,11 @@ const config: Config = {
         },
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: 'about', label: 'About', position: 'left' },
+        { to: 'services', label: 'Services', position: 'left' },
         {
           type: 'docSidebar',
           docsPluginId: 'extensions',
-          sidebarId: 'gettingStartedSidebar',
+          sidebarId: 'extensionsSidebar',
           label: 'Extensions', 
           position: 'left',
         },
@@ -141,7 +142,7 @@ const config: Config = {
           items: [
             {
               label: 'Reference',
-              to: '/docs/intro',
+              to: '/erp',
             },
           ],
         },
@@ -184,7 +185,51 @@ const config: Config = {
       theme: prismThemes.duotoneLight,
       darkTheme: prismThemes.nightOwl,
     },
+    
+    // ref: https://mermaid.js.org/config/theming.html
+    // ref: https://github.com/mermaid-js/mermaid/blob/master/packages/mermaid/src/config.type.ts
+    mermaid: {
+      theme: {light: 'default', dark: 'dark'},
+    },
   } satisfies Preset.ThemeConfig,
+
+  markdown: {
+    mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    }
+  },
+
+  themes: [
+    // ... Your other themes.
+    '@docusaurus/theme-mermaid',
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      /** @type {import("@easyops-cn/docusaurus-search-local").PluginOptions} */
+      ({
+        // ... Your options.
+        indexDocs: false,
+        indexBlog: true,
+        indexPages: true,
+        docsRouteBasePath: "/",
+        blogRouteBasePath: "/blog",        
+        language:"en",
+        docsDir: "docs",        
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        searchResultLimits: 25,
+        searchResultContextMaxLength: 50,
+        searchBarShortcut: true,
+        searchBarShortcutHint: true,
+        searchBarShortcutKeymap: "ctrl+k",
+        searchBarPosition: "right",
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        // language: ["en", "zh"],
+        // ```
+      }),
+    ],
+  ],
 };
 
 export default config;

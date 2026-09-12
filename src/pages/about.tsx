@@ -15,10 +15,25 @@ export default function About() {
           <h1 className='logo-blue'>About</h1>
           <p>This is the about page.</p>
         </div>
-        <div>
+        <div className='wrapper'>
+          <p>docs Markdown section </p>
           <Link className="button button--secondary button--md"
-                to="/getting-started">
+                to="/extensions">
                 Goto Extension
+          </Link>
+        </div>
+        <div className='wrapper'>
+          <p>pages Markdown section</p>
+          <Link className="button button--secondary button--md"
+                to="/services">
+                Goto Services
+          </Link>
+        </div>
+        <div className='wrapper'>
+          <p>Goto home page</p>
+          <Link className="button button--secondary button--md"
+                to="/">
+                Goto Home
           </Link>
         </div>
       </div>
