@@ -34,7 +34,7 @@ const config: Config = {
   url: 'https://docs.auditplus.app',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/aplus-docs/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -211,8 +211,8 @@ const config: Config = {
         indexDocs: false,
         indexBlog: true,
         indexPages: true,
-        docsRouteBasePath: "/",
-        blogRouteBasePath: "/blog",        
+        docsRouteBasePath: "/aplus-docs/",
+        blogRouteBasePath: "/aplus-docs/blog",        
         language:"en",
         docsDir: "docs",        
         // `hashed` is recommended as long-term-cache of index file is possible.
