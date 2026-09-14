@@ -1,3 +1,25 @@
+hchockarprasad:
+  name: H. Chockar Prasad
+  title: Chief Technical Officer, Co-founder Auditplus Technologies
+  url: https://linkedin.com/in/hchockarprasad
+  image_url: https://www.auditplus.io/images/team/hchockarprasad-author.jpg
+  page: true
+  socials:
+    linkedin: hchockarprasad
+    github: hchockarprasad
+    profile: https://www.auditplus.io/profile/hchockarprasad
+
+antonyjudes:
+  name: S. Antony Judes
+  title: Team Head, Auditplus Technologies
+  url: https://linkedin.com/in/leefordjudes
+  image_url: https://www.auditplus.io/images/team/antonyjudes-author.jpg
+  page: true
+  socials:
+    linkedin: leefordjudes
+    github: leefordjudes
+    profile: https://www.auditplus.io/profile/antonyjudes
+    
 yangshun:
   name: Yangshun Tay
   title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd

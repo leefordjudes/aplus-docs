@@ -92,8 +92,7 @@ const config: Config = {
         id: 'extensions',            // Unique ID for this specific plugin instance
         path: 'extensions',          // Points to your root folder name
         routeBasePath: 'extensions', // Generates the URL prefix (/extensions)
-        // sidebarPath: './sidebars.ts',     // We will define the sidebar layout inside sidebars.ts
-        sidebarPath: './sidebars-extensions.ts', 
+        sidebarPath: './sidebars-extensions.ts', // We will define the sidebar layout inside sidebars-extensions.ts
       },
     ],
   ],
