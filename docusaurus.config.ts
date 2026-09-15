@@ -119,6 +119,8 @@ const config: Config = {
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: 'about', label: 'About', position: 'left' },
         { to: 'services', label: 'Services', position: 'left' },
+        { to: 'fullpg1', label: 'FPage1', position: 'left' },
+        { to: 'fullpg2', label: 'FPage2', position: 'left' },
         {
           type: 'docSidebar',
           docsPluginId: 'extensions',
