@@ -1,6 +1,10 @@
-# Website
+# Documentation Website
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+
+## CSS Framework : Infima
+
+https://infima.dev/docs/getting-started/introduction
 
 ## Installation
 
