@@ -17,3 +17,28 @@ hola:
   label: Hola
   permalink: /hola
   description: Hola tag description
+
+auditplus:
+  label: Auditplus
+  permalink: /docs
+  description: Auditplus Technologies
+
+erp:
+  label: ERP
+  description: Auditplus ERP
+
+ai:
+  label: Auditplus AI
+  description: Auditplus AI Integration
+
+connector:
+  label: Connector App
+  description: Auditplus Connector App
+
+developer:
+  label: Developer Portal
+  description: Auditplus Developer
+
+partner:
+  label: Partner App
+  description: Auditplus Partner Program

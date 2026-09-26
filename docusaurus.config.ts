@@ -92,8 +92,7 @@ const config: Config = {
         id: 'extensions',            // Unique ID for this specific plugin instance
         path: 'extensions',          // Points to your root folder name
         routeBasePath: 'extensions', // Generates the URL prefix (/extensions)
-        // sidebarPath: './sidebars.ts',     // We will define the sidebar layout inside sidebars.ts
-        sidebarPath: './sidebars-extensions.ts', 
+        sidebarPath: './sidebars-extensions.ts', // We will define the sidebar layout inside sidebars-extensions.ts
       },
     ],
   ],
@@ -120,6 +119,9 @@ const config: Config = {
         { to: '/blog', label: 'Blog', position: 'left' },
         { to: 'about', label: 'About', position: 'left' },
         { to: 'services', label: 'Services', position: 'left' },
+        { to: 'showcase', label: 'Showcase', position: 'left' },
+        { to: 'fullpg1', label: 'FPage1', position: 'left' },
+        { to: 'fullpg2', label: 'FPage2', position: 'left' },
         {
           type: 'docSidebar',
           docsPluginId: 'extensions',
