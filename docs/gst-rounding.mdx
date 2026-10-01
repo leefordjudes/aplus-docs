@@ -34,6 +34,8 @@ Banker's rounding (round half to even) rounds a number to the nearest even digit
 
 ## Banker's Rounding Examples for GST Rounding
 
+Assume 4000 is 18% tax inclusive, find 9% of cgst/sgst,<br/>
+
 4000/1.18<br/>
 3389.83 => 9% => 305.08<br/>
 305.08+305.08 => 610.16<br/>
@@ -48,6 +50,28 @@ Banker's rounding (round half to even) rounds a number to the nearest even digit
 if 3rd digit is 5, 2nd digit is even(0,2,4,6,8), then make 2nd digit to odd(1,3,5,7,9)<br/>
 if 3rd digit is 5, 2nd digit is odd(1,3,5,7,9), then leave 2nd digit as it is<br/>
 
+![GST Offline Tool Example](./gst-rounding.png)
+
+For Igst use generic default formula: 
+
+```code
+Amount X ( IgstRatio / 100 )
+```
+
+|Amount|IGST 5% | Actual | Description |
+|----:|:------:|------:|:-----------|
+|111.70|5.58|5.5850|if 3rd is 5, 2nd is even, keep it, use reverse bankers round|
+|111.50|5.58|5.5750|if 3rd is 5, 2nd is odd, make it even, use reverse bankers round|
+|111.45|5.57|5.5725|if 3rd is below 5, keep 2nd as it is|
+|111.55|5.58|5.5775|if 3rd is above 5, do up round for 2nd|
+
+:::tip
+For tax inclusive,
+Sometimes, we can not bring back 4000 from derived taxable amount 3389.84.
+:::
+:::info
+For tax exclusive, there is no issue, we calculate cgst,sgst,igst taxes from this 4000.
+:::
 
 ## Dart Implementation - Only for CGST & SGST Rounding
 ```dart
