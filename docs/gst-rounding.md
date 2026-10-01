@@ -32,6 +32,24 @@ Banker's rounding (round half to even) rounds a number to the nearest even digit
     - 2.125 → 2.12 (The preceding digit 2 is even, so it rounds down)
     - 2.135 → 2.14 (The preceding digit 3 is odd, so it rounds up)
 
+## Banker's Rounding Examples for GST Rounding
+
+4000/1.18<br/>
+3389.83 => 9% => 305.08<br/>
+305.08+305.08 => 610.16<br/>
+4000-610.16 = 3389.84<br/>
+
+3389.84 + 9%(305.0856) .085=>.09 so, 305.09<br/>
+
+111.0 + 2.5% (2.775) .775 => .77, so 2.77<br/>
+111.4 + 2.5% (2.785) .785 => .79, so 2.79<br/>
+3389.84 + 9%(305.0856) .085=>.09 <br/>
+
+if 3rd digit is 5, 2nd digit is even(0,2,4,6,8), then make 2nd digit to odd(1,3,5,7,9)<br/>
+if 3rd digit is 5, 2nd digit is odd(1,3,5,7,9), then leave 2nd digit as it is<br/>
+
+
+## Dart Implementation - Only for CGST & SGST Rounding
 ```dart
 double roundGST(double amount, {int places = 2}) {
   final fixed = amount.toStringAsFixed(20); // reveal the true stored value
@@ -73,6 +91,7 @@ void main() {
 }
 ```
 
+## C# Implementation - Only for CGST & SGST Rounding
 ```c#
 using System;
 using System.Globalization;
