@@ -19,3 +19,56 @@ graph TD;
     B-->D;
     C-->D;
 ```
+
+```mermaid
+mindmap
+  root((aerp))
+    start
+      options
+        -c --config
+        -h --help
+        -v --version
+    configure
+      options
+        -o --output
+        --set <Key> <Value>
+        -h --help
+        -v --version    
+    app
+      options
+        -h --help
+        -v --version
+      init
+        Options
+          --name <NAME>               
+          --bundle-id <BUNDLE_ID>     
+          --dependency <DEPENDENCIES> 
+          --author <AUTHOR>           
+          --description <DESCRIPTION> 
+          --app-version <APP_VERSION> 
+          --module <MODULES>          
+          --path <PATH>               
+          --no-ci                     
+          -y, --yes                       
+          --force                     
+          -h, --help                      
+          -V, --version
+      new
+      build
+      pack
+      install
+      info
+        arguments
+          *.aerpb
+        options
+          -h --help
+          -v --version
+      help
+    pack
+    version
+    help 
+    options
+      -c --config
+      -h --help
+      -v --version
+```
